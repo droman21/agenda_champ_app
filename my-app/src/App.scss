@@ -242,7 +242,7 @@ header {
     overflow-x: hidden;
     overflow-y: hidden;
     border-right: $generic-border;
-    background-color: #fafafa;
+    background-color: #e9e8e8;
   
     @include mq('900px') {
       display: none;
