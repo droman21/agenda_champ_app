@@ -56,16 +56,22 @@ export const useProjects = () => {
 
     useEffect(() => {
         firebase
-        .firestore()
-        .collection('projects')
-        .where('userId', '==', '7dbaf0e0-983c-48f1-a43a-c5f30af5bacd')
-        .orderBy('projectId')
-        .get()
-        .then(snapshot => {
-            const allProjects = snapshot.docs.map(project => ({
-                ...project.data(),
-                docId: project.id,
-            }));
-        });
-    }, []);
+            .firestore()
+            .collection('projects')
+            .where('userId', '==', '7dbaf0e0-983c-48f1-a43a-c5f30af5bacd')
+            .orderBy('projectId')
+            .get()
+            .then(snapshot => {
+                const allProjects = snapshot.docs.map(project => ({
+                    ...project.data(),
+                    docId: project.id,
+                }));
+
+                if (JSON.stringify(allProjects) !== JSON.stringify(projects)) {
+                    setProjects(allProjects);
+                }
+            });
+    }, [projects]);
+
+    return {projects, setProjects};
 };
