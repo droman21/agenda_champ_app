@@ -269,12 +269,27 @@ header {
     padding-right: 15px;
 
     &:hover .sidebar__project-delete {
-      display: block;
+      display: flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
     }
   }
 
   &__project {
     cursor: pointer;
+
+    div:nth-child(1) {
+      padding: 5px 0;
+      padding-left: 10px;
+      padding-right: 15px;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
 
     &-delete {
       margin-left: auto;
@@ -316,22 +331,26 @@ header {
         color: #af38eb;
       }
     }
-    &__projects {
-        padding-left: 3px;
-      }
+  }
+
+  &__projects {
+      padding-left: 3px;
+  }
     
-      &__project {
-        @include va("left");
-      }
+  &__project {
+      @include va("left");
+  }
     
-      &__dot {
-        margin-right: 10px;
-        font-size: 30px;
-      }
+  &__dot {
+      margin-right: 10px;
+      font-size: 30px;
+  }
     
-      &__middle {
+  &__middle {
         margin-top: 20px;
         margin-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         border-bottom: $generic-border;
         padding-left: 10px;
@@ -342,7 +361,8 @@ header {
           margin-right: 10px;
     
           svg.hidden-projects {
-            transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
           }
         }
     
@@ -354,7 +374,7 @@ header {
           padding-bottom: 20px;
         }
       }
-  }
+
   &__generic {
     li {
       padding: 10px 0 10px 10px;
@@ -365,16 +385,23 @@ header {
       line-height: 1.5;
       font-size: 15px;
 
-      span:first-of-type {
-        margin-right: 10px;
+      div:nth-child(1) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 10px 0 10px 10px;
+        width: 100%;
 
-        svg {
-          width: 18px;
-          height: 18px;
-          color: #555;
+        span:first-of-type {
+          margin-right: 10px;
+
+          svg {
+            width: 18px;
+            height: 18px;
+            color: #555;
         }
       }
-
+      }
       &.active,
       &:hover {
         font-weight: bold;
