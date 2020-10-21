@@ -3,7 +3,7 @@
    ========================================================================== */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
 
-// General Settings
+//General Settings
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ ul {
   padding: 0;
 }
 
-// Variables
+//Variables
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
   rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
@@ -260,7 +260,7 @@ header {
   border-right: $generic-border;
   background-color: #e9e7e7;
 
-  @include mq("900px") {
+  @include mq('900px') {
     display: none;
   }
 
@@ -338,7 +338,7 @@ header {
   }
     
   &__project {
-      @include va("left");
+      @include va('left');
   }
     
   &__dot {
@@ -374,16 +374,16 @@ header {
           padding-bottom: 20px;
         }
       }
-
-  &__generic {
-    li {
-      padding: 10px 0 10px 10px;
-      list-style-type: none;
-      color: #333;
-      display: flex;
-      cursor: pointer;
-      line-height: 1.5;
-      font-size: 15px;
+      
+      &__generic {
+        li {
+          padding: 10px 0 10px 10px;
+          list-style-type: none;
+          color: #333;
+          display: flex;
+          cursor: pointer;
+          line-height: 1.5;
+          font-size: 15px;
 
       div:nth-child(1) {
         display: -webkit-box;
@@ -469,7 +469,7 @@ header {
   padding-top: 80px;
   padding-bottom: 84px;
 
-  @include mq("900px") {
+  @include mq('900px') {
     margin-left: 0;
     width: auto;
   }
@@ -653,8 +653,8 @@ header {
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 
       span:first-of-type {
         margin-right: 10px;
@@ -673,7 +673,7 @@ header {
   @include box-overlay();
   background-color: white;
 
-  @include mq("900px") {
+  @include mq('900px') {
     width: 200px;
     right: 0;
   }
@@ -711,7 +711,7 @@ header {
   }
 
   &__submit {
-    @include btn("100px");
+    @include btn('100px');
   }
 
   &__cancel {
