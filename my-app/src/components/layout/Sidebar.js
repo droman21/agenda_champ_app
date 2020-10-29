@@ -2,11 +2,17 @@ import React from 'react';
 import {
     FaChevronDown, FaInbox, FaRegCalendarAlt, FaRegCalendar,
 } from 'react-icons/fa';
+import { useSelectedProjectValue } from '../../context';
 
 
 
 
-export const Sidebar = () => (
+export const Sidebar = () => {
+    const { setSelectedProject } = useSelectedProjectValue;
+    const 
+}
+
+    return (
     <div className="sidebar" data-testid="sidebar">
         <ul className="sidebar__generic">
             <li data-testid="inbox" className="inbox">

@@ -13,4 +13,6 @@ export const App = () => (
     </div>
      </ProjectsProvider>
   </SelectedProjectProvider>
-  );
+);
+
+

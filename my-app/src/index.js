@@ -1,12 +1,21 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { App } from './App';
-import './App.scss';
+import {
+  ProjectsContext,
+  ProjectsProvider,
+  useProjectsValue,
+} from './projects-context';
 
-render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import {
+  SelectedProjectContext,
+  SelectedProjectProvider,
+  useSelectedProjectValue,
+} from './selected-project-context';
+
+export {
+  ProjectsContext,
+  ProjectsProvider,
+  useProjectsValue,
+  SelectedProjectContext,
+  SelectedProjectProvider,
+  useSelectedProjectValue,
+};
 
